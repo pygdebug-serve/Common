@@ -2,5 +2,6 @@
 
 ## Main
 ### Info
-+ 0x00 - PacketPlatformInformation
-+ 0x01 - PacketServerStatus
++ 0x00 - PacketInformationRequest
++ 0x01 - PacketPlatformInformation
++ 0x02 - PacketServerStatus

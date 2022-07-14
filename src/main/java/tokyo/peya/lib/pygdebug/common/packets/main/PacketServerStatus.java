@@ -19,7 +19,7 @@ public class PacketServerStatus implements PacketBase
     @Override
     public byte getId()
     {
-        return 0x01;
+        return 0x02;
     }
 
     @Value

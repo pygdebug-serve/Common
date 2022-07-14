@@ -19,7 +19,7 @@ public class PacketPlatformInformation implements PacketBase
     @Override
     public byte getId()
     {
-        return 0x00;
+        return 0x01;
     }
 
     @Value
