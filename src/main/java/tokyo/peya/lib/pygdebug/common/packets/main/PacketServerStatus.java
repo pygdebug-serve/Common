@@ -5,12 +5,14 @@ import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.Value;
 import tokyo.peya.lib.pygdebug.common.PacketBase;
+import tokyo.peya.lib.pygdebug.common.PacketSender;
 
 import java.util.UUID;
 
 @Value
 @Builder
 @AllArgsConstructor
+@PacketSender(PacketSender.Type.SERVER)
 public class PacketServerStatus implements PacketBase
 {
     PluginInformation[] plugins;

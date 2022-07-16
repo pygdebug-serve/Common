@@ -4,10 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
 import tokyo.peya.lib.pygdebug.common.PacketBase;
+import tokyo.peya.lib.pygdebug.common.PacketSender;
 
 @Value
 @Builder
 @AllArgsConstructor
+@PacketSender(PacketSender.Type.SERVER)
 public class PacketPlatformInformation implements PacketBase
 {
 
