@@ -7,11 +7,13 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.TYPE)
-public @interface PacketSender
+public @interface Packet
 {
-    Type[] value();
+    byte value();
 
-    enum Type
+    Sender sender() default Sender.SERVER;
+
+    enum Sender
     {
         CLIENT,
         SERVER

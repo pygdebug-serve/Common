@@ -3,11 +3,11 @@ package tokyo.peya.lib.pygdebug.common.packets.main;
 import lombok.AllArgsConstructor;
 import lombok.Value;
 import tokyo.peya.lib.pygdebug.common.PacketBase;
-import tokyo.peya.lib.pygdebug.common.PacketSender;
+import tokyo.peya.lib.pygdebug.common.Packet;
 
 @Value
 @AllArgsConstructor
-@PacketSender(PacketSender.Type.CLIENT)
+@Packet(value = 0x00, sender = Packet.Sender.SERVER)
 public class PacketInformationRequest implements PacketBase
 {
     Action action;
@@ -15,12 +15,6 @@ public class PacketInformationRequest implements PacketBase
     public PacketInformationRequest()
     {
         this.action = null;
-    }
-
-    @Override
-    public byte getId()
-    {
-        return 0x00;
     }
 
     public enum Action

@@ -2,17 +2,16 @@ package tokyo.peya.lib.pygdebug.common.packets.main;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.NoArgsConstructor;
 import lombok.Value;
 import tokyo.peya.lib.pygdebug.common.PacketBase;
-import tokyo.peya.lib.pygdebug.common.PacketSender;
+import tokyo.peya.lib.pygdebug.common.Packet;
 
 import java.util.UUID;
 
 @Value
 @Builder
 @AllArgsConstructor
-@PacketSender(PacketSender.Type.SERVER)
+@Packet(value = 0x02, sender = Packet.Sender.CLIENT)
 public class PacketServerStatus implements PacketBase
 {
     PluginInformation[] plugins;
@@ -27,12 +26,6 @@ public class PacketServerStatus implements PacketBase
         this.players = new PlayerInformation[0];
         this.worlds = new WorldInformation[0];
         this.load = null;
-    }
-
-    @Override
-    public byte getId()
-    {
-        return 0x02;
     }
 
     @Value
