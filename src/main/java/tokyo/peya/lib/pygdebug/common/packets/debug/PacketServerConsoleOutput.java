@@ -13,4 +13,9 @@ import java.util.logging.LogRecord;
 public class PacketServerConsoleOutput implements PacketBase
 {
     LogRecord context;
+
+    public PacketServerConsoleOutput()
+    {
+        this(null);
+    }
 }

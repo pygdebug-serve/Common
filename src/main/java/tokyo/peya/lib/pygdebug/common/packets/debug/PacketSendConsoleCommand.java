@@ -11,4 +11,9 @@ import tokyo.peya.lib.pygdebug.common.PacketBase;
 public class PacketSendConsoleCommand implements PacketBase
 {
     String command;
+
+    public PacketSendConsoleCommand()
+    {
+        this(null);
+    }
 }

@@ -12,4 +12,9 @@ import tokyo.peya.lib.pygdebug.common.debugger.DebuggerOption;
 public class PacketDebugOption implements PacketBase
 {
     DebuggerOption debuggerOption;
+
+    public PacketDebugOption()
+    {
+        this(null);
+    }
 }
