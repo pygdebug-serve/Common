@@ -11,7 +11,7 @@ public @interface Packet
 {
     byte value();
 
-    Sender sender() default Sender.SERVER;
+    Sender[] sender() default Sender.SERVER;
 
     enum Sender
     {
