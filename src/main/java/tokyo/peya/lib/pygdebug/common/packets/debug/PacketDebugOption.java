@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Value;
 import tokyo.peya.lib.pygdebug.common.Packet;
 import tokyo.peya.lib.pygdebug.common.PacketBase;
-import tokyo.peya.lib.pygdebug.common.debugger.DebuggerOption;
+import tokyo.peya.lib.pygdebug.common.config.DebuggerOption;
 
 @Value
 @AllArgsConstructor
